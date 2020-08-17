@@ -9,6 +9,7 @@ body {
 .slide-button{
     padding: 20px;
     border: none;
+    font-weight: bold;
 }
 
 .slide-button:hover{
