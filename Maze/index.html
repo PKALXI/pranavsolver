@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>Pranav's Maze solver</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="solver.js?n=7"></script>
+  </<head>
+  <body class = "allFont" onload="resetMaze()">
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="../home.html">Home</a>
+      <a href="../Pong/index.html">Pong</a>
+    </div>
+
+    <div id="main">
+      <span id = "opnav" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+
+      <h1 id = "title">Pranav's AI Maze Solver</h1>
+
+        <p class="subHeader">Click on cells to draw walls, then click solve and the AI will find the shortest path.</p>
+        <p class="subHeader">The red tile is the start and the pink tile is the finish</p>
+          <button type="button" name="RESET!" class="button" onclick="resetMaze()" id = "RESET">RESET!</button>
+          <button type="button" name="SOLVE!" class="button" onclick="solveMaze()" id = "SOLVE">SOLVE WITH BFS!</button>
+
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <div id = "maze" class = "maze">
+            <div id = "row" class = "row">
+              <div class = "square_start" id = "1"></div>
+              <div class = "square" id = "2" onclick="clicked(2)"></div>
+              <div class = "square" id = "3" onclick="clicked(3)"></div>
+              <div class = "square" id = "4" onclick="clicked(4)"></div>
+              <div class = "square" id = "5" onclick="clicked(5)"></div>
+              <div class = "square" id = "6" onclick="clicked(6)"></div>
+              <div class = "square" id = "7" onclick="clicked(7)"></div>
+              <div class = "square" id = "8" onclick="clicked(8)"></div>
+            </div>
+
+            <div id = "row" class = "row">
+              <div class = "square" id = "9" onclick="clicked(9)"></div>
+              <div class = "square" id = "10" onclick="clicked(10)"></div>
+              <div class = "square" id = "11" onclick="clicked(11)"></div>
+              <div class = "square" id = "12" onclick="clicked(12)"></div>
+              <div class = "square" id = "13" onclick="clicked(13)"></div>
+              <div class = "square" id = "14" onclick="clicked(14)"></div>
+              <div class = "square" id = "15" onclick="clicked(15)"></div>
+              <div class = "square" id = "16" onclick="clicked(16)"></div>
+            </div>
+
+            <div id = "row" class = "row">
+              <div class = "square" id = "17" onclick="clicked(17)"></div>
+              <div class = "square" id = "18" onclick="clicked(18)"></div>
+              <div class = "square" id = "19" onclick="clicked(19)"></div>
+              <div class = "square" id = "20" onclick="clicked(20)"></div>
+              <div class = "square" id = "21" onclick="clicked(21)"></div>
+              <div class = "square" id = "22" onclick="clicked(22)"></div>
+              <div class = "square" id = "23" onclick="clicked(23)"></div>
+              <div class = "square" id = "24" onclick="clicked(24)"></div>
+            </div>
+
+            <div id = "row" class = "row">
+              <div class = "square" id = "25" onclick="clicked(25)"></div>
+              <div class = "square" id = "26" onclick="clicked(26)"></div>
+              <div class = "square" id = "27" onclick="clicked(27)"></div>
+              <div class = "square" id = "28" onclick="clicked(28)"></div>
+              <div class = "square" id = "29" onclick="clicked(29)"></div>
+              <div class = "square" id = "30" onclick="clicked(30)"></div>
+              <div class = "square" id = "31" onclick="clicked(31)"></div>
+              <div class = "square" id = "32" onclick="clicked(32)"></div>
+            </div>
+
+            <div id = "row" class = "row">
+              <div class = "square" id = "33" onclick="clicked(33)"></div>
+              <div class = "square" id = "34" onclick="clicked(34)"></div>
+              <div class = "square" id = "35" onclick="clicked(35)"></div>
+              <div class = "square" id = "36" onclick="clicked(36)"></div>
+              <div class = "square" id = "37" onclick="clicked(37)"></div>
+              <div class = "square" id = "38" onclick="clicked(38)"></div>
+              <div class = "square" id = "39" onclick="clicked(39)"></div>
+              <div class = "square" id = "40" onclick="clicked(40)"></div>
+            </div>
+
+            <div id = "row" class = "row">
+              <div class = "square" id = "41" onclick="clicked(41)"></div>
+              <div class = "square" id = "42" onclick="clicked(42)"></div>
+              <div class = "square" id = "43" onclick="clicked(43)"></div>
+              <div class = "square" id = "44" onclick="clicked(44)"></div>
+              <div class = "square" id = "45" onclick="clicked(45)"></div>
+              <div class = "square" id = "46" onclick="clicked(46)"></div>
+              <div class = "square" id = "47" onclick="clicked(47)"></div>
+              <div class = "square" id = "48" onclick="clicked(48)"></div>
+            </div>
+
+            <div id = "row" class = "row">
+              <div class = "square" id = "49" onclick="clicked(49)"></div>
+              <div class = "square" id = "50" onclick="clicked(50)"></div>
+              <div class = "square" id = "51" onclick="clicked(51)"></div>
+              <div class = "square" id = "52" onclick="clicked(52)"></div>
+              <div class = "square" id = "53" onclick="clicked(53)"></div>
+              <div class = "square" id = "54" onclick="clicked(54)"></div>
+              <div class = "square" id = "55" onclick="clicked(55)"></div>
+              <div class = "square" id = "56" onclick="clicked(56)"></div>
+            </div>
+
+            <div id = "row" class = "row">
+              <div class = "square" id = "57" onclick="clicked(57)"></div>
+              <div class = "square" id = "58" onclick="clicked(58)"></div>
+              <div class = "square" id = "59" onclick="clicked(59)"></div>
+              <div class = "square" id = "60" onclick="clicked(60)"></div>
+              <div class = "square" id = "61" onclick="clicked(61)"></div>
+              <div class = "square" id = "62" onclick="clicked(62)"></div>
+              <div class = "square" id = "63" onclick="clicked(63)"></div>
+              <div class = "square_finish" id = "64"></div>
+            </di57
+        </di58
+  </bod59
+</htm664

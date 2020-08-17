@@ -1,0 +1,134 @@
+body{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  transition: background-color .5s;
+  padding: 0%;
+  margin: 0%;
+  color: #f25f55;
+  background-color: #333333;
+}
+
+.subHeader{
+  color: #b3b3b3;
+}
+
+.allFont{
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button{
+  padding: 14px 24px;
+  border: none;
+  background-color: #eb3734;
+  transition-duration: 0.4s;
+  color: white;
+}
+
+.button:hover{
+  border: 1px 1px 1px 1px;
+  border-style: solid;
+  border-color: #eb3734;
+  background-color: white;
+  color: #eb3734;
+  border: none;
+}
+
+.solveText{
+  padding: 14px 24px;
+  border: none;
+  background-color: #eb3734;
+  transition-duration: 0.4s;
+  color: white;
+}
+
+.square {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: white;
+}
+
+.row{
+  display: inline-block;
+  text-align: center;
+  padding: none;
+  margin: none;
+}
+
+.square_start{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: #f25f55;
+}
+
+.square_finish{
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: rgb(255, 140, 255);
+}
+
+.maze{
+  text-align: center;
+  margin: auto;
+  padding: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+/* NAV START */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #af130e;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+/* NAV END */
+
+#main{
+  text-align: left;
+}

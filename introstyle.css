@@ -1,0 +1,51 @@
+html{
+    background-color: #023e5a;
+    color: #ededed;
+    font-family: monospace;
+    text-align: center;
+    font-size: 500%;
+}
+
+.button{
+    display: none;
+}
+
+.thebutton {
+    background-color: #ade7fd; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color: #246bbd;
+  }
+
+  .thebutton:hover{
+    background-color: #246bbd; /* Green */
+    color: #ade7fd;
+  }
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
